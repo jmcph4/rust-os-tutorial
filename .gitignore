@@ -1,0 +1,6 @@
+/target
+
+# Miscellaneous
+msg.tmp
+*.tmp
+
