@@ -9,7 +9,11 @@ use rust_os_tutorial::println;
 
 #[no_mangle]
 pub extern "C" fn _start() -> ! {
+    rust_os_tutorial::init();
     println!("Hello World{}", "!");
+
+    // invoke a breakpoint exception
+    x86_64::instructions::interrupts::int3();
 
     #[cfg(test)]
     test_main();

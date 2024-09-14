@@ -10,6 +10,7 @@ use rust_os_tutorial::println;
 
 #[no_mangle] // don't mangle the name of this function
 pub extern "C" fn _start() -> ! {
+    rust_os_tutorial::init();
     test_main();
 
     loop {}
