@@ -15,10 +15,6 @@ pub extern "C" fn _start() -> ! {
     loop {}
 }
 
-fn test_runner(tests: &[&dyn Fn()]) {
-    unimplemented!();
-}
-
 #[panic_handler]
 fn panic(info: &PanicInfo) -> ! {
     rust_os_tutorial::test_panic_handler(info);
